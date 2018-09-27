@@ -1,11 +1,12 @@
 #/bin/bash
 
-clear                  
+clear
+sleep 1
 echo -e "\033[1;31m   [ Script De Configuracion SSL/TLS Stunnel4 ] "
 echo -e "\033[1;34m     ======================================"
 echo -e "\033[1;36m            °°°°° David_Villan °°°°°      "
 echo -e "\033[1;34m     ======================================"
-sleep 4
+sleep 6
 
 apt-get update -y
 yum update -y
