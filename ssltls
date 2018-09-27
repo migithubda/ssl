@@ -6,7 +6,7 @@ echo -e "\033[1;31m   [ Script De Configuracion SSL/TLS Stunnel4 ] "
 sleep 2
 echo -e "\033[1;34m     ======================================"
 echo -e "\033[1;36m            °°°°° David_Villan °°°°°      "
-echo -e "\033[1;34m     ======================================"
+echo -e "\033[1;34m     ======================================\033[0m"
 sleep 6
 
 apt-get update -y
@@ -42,7 +42,7 @@ clear
 
 echo -e "\033[1;31m =========================================="
 echo -e "\033[1;33m     ------ GENERANDO CERTIFICADO -------"
-echo -e "\033[1;31m =========================================="
+echo -e "\033[1;31m ==========================================\033[0m"
 sleep 1
 openssl genrsa 2048 > stunnel.key
 openssl req -new -key stunnel.key -x509 -days 1000 -out stunnel.crt
@@ -53,7 +53,7 @@ echo -e "\033[1;34m ============================================"
 sleep 3
 echo -e "\033[1;31m ->>>>"
 sleep 1
-echo -e "\033[1;31m ->>>>>>>>>>>>>>>>>>"
+echo -e "\033[1;31m ->>>>>>>>>>>>>>>>>>\033[0m"
 sleep 1
 rm /etc/stunnel/stunnel.conf
 rm /etc/default/stunnel4
@@ -62,7 +62,7 @@ cat stunnel.crt stunnel.key > stunnel.pem
 mv stunnel.pem /etc/stunnel/
 clear
 echo -e " "
-echo -e "\033[1;31m          [ DIGITE SU PUERTO - SSL ]"
+echo -e "\033[1;31m          [ DIGITE SU PUERTO - SSL ]\033[0m"
 sleep 2
 read -p " [-] Puerto = " port
 clear
@@ -80,7 +80,7 @@ echo -e "\033[1;31m ->>>>>>>>>>>>>>>>"
 sleep 1
 echo -e "\033[1;31m -->>>>>>>>>>>>>>>>>>>>>>>>"
 sleep 1
-echo -e "\033[1;31m --->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo -e "\033[1;31m --->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\033[0m"
 sleep 1
 
 
@@ -98,7 +98,7 @@ echo "accept = $port " >> /etc/stunnel/stunnel.conf
 clear
 echo -e "\033[1;34m =============================================="
 echo -e "\033[1;36m      °°°°° CONFIGURANDO -->  STUNNEL4 °°°°°"
-echo -e "\033[1;34m =============================================="
+echo -e "\033[1;34m ==============================================\033[0m"
 sleep 3
 
 echo "ENABLED=1 " >> /etc/default/stunnel4
@@ -113,7 +113,7 @@ sleep 3
 
 echo -e "\033[1;31m  ==============================================="
 echo -e "\033[1;33m      CORRERA ERRORES NORMALES >>>> ESPEREE..  "
-echo -e "\033[1;31m  ==============================================="
+echo -e "\033[1;31m  ===============================================\033[0m"
 sleep 1
 service ssh start 1>/dev/null 2 /dev/null
 /etc/init.d/ssh start 1>/dev/null 2 /dev/null
@@ -136,7 +136,7 @@ echo -e "\033[1;36m    -{   REINICIADO......  }-"
 sleep 3
 echo -e "\033[1;31m ->>>>>>>>"
 sleep 1
-echo -e "\033[1;31m ->>>>>>>>>>>>>>>>>>>>>>>"
+echo -e "\033[1;31m ->>>>>>>>>>>>>>>>>>>>>>>\033[0m"
 sleep 1
 clear
 clear
