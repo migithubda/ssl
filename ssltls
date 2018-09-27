@@ -1,5 +1,6 @@
 #/bin/bash
-                   
+
+clear                  
 echo -e "\033[1;31m   [ Script De Configuracion SSL/TLS Stunnel4 ] "
 echo -e "\033[1;34m     ======================================"
 echo -e "\033[1;36m            °°°°° David_Villan °°°°°      "
