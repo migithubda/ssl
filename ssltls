@@ -30,7 +30,7 @@ clear
 yum install stunnel -y
 clear
 
-echo -e "\033[1;36m      { CAPTURANDO IP.... } "
+echo -e "\033[1;36m           { CAPTURANDO IP.... }\033[0m"
 ip=$(curl https://api.ipify.org/)
 echo $ip
 sleep 5
@@ -70,7 +70,7 @@ clear
 echo -e "\033[1;34m =============================================="
 echo -e "\033[1;36m        CONFIGURANDO --> STUNNEL.CONF "
 echo -e "\033[1;34m =============================================="
-sleep 3
+sleep 4
 
 echo -e "\033[1;31m ->>>>"
 sleep 1
@@ -82,7 +82,7 @@ echo -e "\033[1;31m -->>>>>>>>>>>>>>>>>>>>>>>>"
 sleep 1
 echo -e "\033[1;31m --->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\033[0m"
 sleep 1
-
+clear
 
 echo "cert = /etc/stunnel/stunnel.pem " >> /etc/stunnel/stunnel.conf
 echo "client = no " >> /etc/stunnel/stunnel.conf
